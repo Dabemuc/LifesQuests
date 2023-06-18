@@ -1,7 +1,8 @@
 import Tree, { Quest } from "../../../interfaces";
 
 interface Props {
-    questTrees: Tree[]
+    questTrees: Tree[],
+    setQuestIdSelected: Function 
 }
 
 export default function mapTrees(props: Props) {
@@ -23,7 +24,7 @@ export default function mapTrees(props: Props) {
     function mapQuestRecursive(quest: Quest, treeId: number, depth: number, split: number, y: number) {
         //generates a node at the given position and manages the positioning of the following nodes based on the width of their following quest-trees
 
-        const id = tmpNodes.length+""
+        const id = quest.id
         const x = 50+250*depth
 
         let countPerDepthLvl = getCountPerDepthLvlRecursive(quest, 0, {})
@@ -35,7 +36,7 @@ export default function mapTrees(props: Props) {
         tmpNodes.push({
                 id: id,
                 position: { x: x, y: y},
-                data: { label: quest.title , done: quest.isDone},
+                data: { label: quest.title , quest: quest, setQuestIdSelected: props.setQuestIdSelected},
                 type: 'questNode',
             })
 

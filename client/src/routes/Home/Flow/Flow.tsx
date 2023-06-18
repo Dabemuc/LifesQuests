@@ -7,7 +7,8 @@ import Tree, { Quest } from '../../../interfaces';
 import mapTrees from './TreeMapper';
 
 interface Props {
-    questTrees: Tree[]
+    questTrees: Tree[],
+    setQuestIdSelected: Function 
 }
 
 export default function Flow(props: Props) {
