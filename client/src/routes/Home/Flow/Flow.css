@@ -1,0 +1,16 @@
+.questNode {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: .8em;
+    border-color: rgb(59, 59, 59) !important;
+    border: 1px;
+    border-style: solid;
+}
+
+.questNode.done {
+    background-color: green;
+}
+
+.react-flow__handle {
+    visibility: hidden;
+}
