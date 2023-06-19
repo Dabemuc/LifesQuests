@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import ReactFlow, { Background, Controls, NodeChange, Node, EdgeChange, applyEdgeChanges, applyNodeChanges, addEdge, Connection, Edge, NodeOrigin, } from 'reactflow';
 import { useState, useCallback, useEffect, SetStateAction } from 'react';
 import 'reactflow/dist/style.css';
@@ -8,7 +9,8 @@ import mapTrees from './TreeMapper';
 
 interface Props {
     questTrees: Tree[],
-    setQuestIdSelected: Function 
+    setQuestIdSelected: Function,
+    handleBackgroundClicked: Function
 }
 
 export default function Flow(props: Props) {
@@ -30,6 +32,9 @@ export default function Flow(props: Props) {
         setEdges(mappedEdges)
     },[])
 
+    function handleBackgroundClicked() {
+        props.handleBackgroundClicked()
+    }
 
     return (
         <ReactFlow 
@@ -40,8 +45,9 @@ export default function Flow(props: Props) {
             // onEdgesChange={onEdgesChange}
             // onConnect={onConnect}
             nodeTypes={nodeTypes}
+            onPaneClick={handleBackgroundClicked}
         >
-            <Background color='#aaaaaa' style={{backgroundColor: '#18181a'}}/>
+            <Background color='#aaaaaa' style={{backgroundColor: '#18181a'}} />
             <Controls />
         </ReactFlow>
       );

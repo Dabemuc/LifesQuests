@@ -2,7 +2,9 @@
     position: absolute;
     z-index: 5;
     height: 100%;
-    border: 1px solid red;
-    background-color: aliceblue;
+    width: 30%;
+    border-left: 1px solid #aaaaaa;
+    background-color: #18181a;
+    color: #ffffff;
     right: 0;
 }

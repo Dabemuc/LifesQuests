@@ -3,7 +3,7 @@ import { Quest } from '../../../interfaces'
 import './Sidebar.css'
 
 interface Props {
-    width: string,
+    visibility: 'hidden' | 'visible',
     questSelected: Quest | undefined
 }
 
@@ -15,7 +15,7 @@ export default function Sidebar(props: Props) {
 
 
     return (
-        <div className="sidebar" style={{width: props.width}}>
+        <div className="sidebar" style={{visibility: props.visibility}}>
             {props.questSelected? <h1>{props.questSelected.title}</h1>: "no quest selected"}
         </div>
     )

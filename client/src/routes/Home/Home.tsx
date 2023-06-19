@@ -8,21 +8,33 @@ import Sidebar from './Sidebar/Sidebar'
 export default function Home() {
     const [questTrees, setQuestTrees] = useState<Tree[]>()
     const [questSelected, setQuestSelected] = useState<Quest>()
+    const [sidebarDisplayed, setSidebarDisplayed] = useState(false)
 
     useEffect(() => {
         setQuestTrees(getQuestTrees())
     }, [])
 
-    function setQuestIdSelected(quest: Quest) {
-        console.log(quest)
+    function setQuestIdSelected(quest: Quest | undefined) {
         setQuestSelected(quest)
+        setSidebarDisplayed(true)
     }
 
+    function handleBackgroundClicked() {
+        setQuestSelected(undefined)
+        setSidebarDisplayed(false)
+    }
 
     return (
         <>
-            <Sidebar width='30%' questSelected={questSelected}/>
-            {questTrees?<Flow questTrees={questTrees} setQuestIdSelected={setQuestIdSelected}/>:<>Failed to load Trees</>}
+            <Sidebar visibility={sidebarDisplayed==true? 'visible': 'hidden'} questSelected={questSelected}/>
+            {questTrees?
+                <Flow 
+                    questTrees={questTrees} 
+                    setQuestIdSelected={setQuestIdSelected} 
+                    handleBackgroundClicked={handleBackgroundClicked}
+                />:
+                <>Failed to load Trees</>
+            }
         </>
     );
 
