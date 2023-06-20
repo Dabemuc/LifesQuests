@@ -2,9 +2,32 @@
     position: absolute;
     z-index: 5;
     height: 100%;
-    width: 30%;
+    width: 0px;
     border-left: 1px solid #aaaaaa;
     background-color: #18181a;
     color: #ffffff;
     right: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
+
+.sidebar.visible {
+    visibility: visible;
+    animation-name: example;
+    animation-duration: .5s;
+    width: 30%;
+}
+
+/* .sidebar.hidden {
+    animation-name: example;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    visibility: hidden;
+} */
+
+@keyframes example {
+    from {width: 0%; 
+        visibility: hidden;}
+    to {width: 30%;
+        visibility: visible;}
+  }

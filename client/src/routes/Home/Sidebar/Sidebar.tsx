@@ -15,7 +15,7 @@ export default function Sidebar(props: Props) {
 
 
     return (
-        <div className="sidebar" style={{visibility: props.visibility}}>
+        <div className={"sidebar " + props.visibility}>
             {props.questSelected? <h1>{props.questSelected.title}</h1>: "no quest selected"}
         </div>
     )

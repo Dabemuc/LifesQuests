@@ -14,3 +14,7 @@
 .react-flow__handle {
     visibility: hidden;
 }
+
+.react-flow__attribution a{
+    color: black
+}
