@@ -1,6 +1,6 @@
 import './Navbar.css'
 import Logo from '../assets/Kamodb-Logo.png'
-import LoginWrapper from '../LoginWrapper/LoginWrapper'
+import LoginWrapper from './LoginWrapper/LoginWrapper'
 
 interface Props {
   user: any, 
