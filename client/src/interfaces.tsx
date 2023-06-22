@@ -9,3 +9,11 @@ export interface Quest {
     description: string,
     followingQuests: Quest[]
 }
+
+export interface UserObject {
+    email: string,
+    email_verified: boolean,
+    given_name: string,
+    name: string,
+    picture: string
+}

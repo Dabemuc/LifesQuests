@@ -1,0 +1,37 @@
+.navbar {
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    /* backdrop-filter: blur(50%); */
+    background-color: #00000060;
+    /* backdrop-filter: brightness(0%); */
+}
+
+.loginWrapper {
+    position: absolute;
+    right: 0px;
+    margin-right: 1em;
+    overflow: hidden;
+}
+
+.loginWrapper img.profile-pic {
+    height: 2.5em;
+    border-radius: 25px;
+}
+
+.loginWrapper .sign-out-btn {
+    background-color: red;
+    z-index: 10;
+}
+
+.loginWrapper .sign-out-btn button{
+    height: 2em;
+    font-size: 1.2em;
+}
+
+#g_a11y_announcement {
+    height: 0px !important;
+}
