@@ -14,7 +14,6 @@
     position: absolute;
     right: 0px;
     margin-right: 1em;
-    overflow: hidden;
 }
 
 .loginWrapper img.profile-pic {
@@ -23,13 +22,13 @@
 }
 
 .loginWrapper .sign-out-btn {
-    background-color: red;
-    z-index: 10;
+    /* background-color: red; */
+    right: 0px;
 }
 
 .loginWrapper .sign-out-btn button{
     height: 2em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #g_a11y_announcement {
