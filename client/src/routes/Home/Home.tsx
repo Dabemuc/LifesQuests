@@ -9,6 +9,7 @@ export default function Home() {
     const [questTrees, setQuestTrees] = useState<Tree[]>()
     const [questSelected, setQuestSelected] = useState<Quest>()
     const [sidebarDisplayed, setSidebarDisplayed] = useState(false)
+    
 
     useEffect(() => {
         setQuestTrees(getQuestTrees())
