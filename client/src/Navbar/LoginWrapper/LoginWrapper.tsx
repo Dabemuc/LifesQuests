@@ -13,8 +13,9 @@ export default function loginWrapper(props: Props) {
             { props.user &&
                 <div>
                     <img src={props.user.picture} className="dropdown-toggle profile-pic" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
-                    <div className="dropdown-menu sign-out-btn" aria-labelledby="profile dropdown">
-                        <button className="dropdown-item" onClick={() => props.handleSignOut()}>Sign out</button>
+                    <div className="dropdown-menu" aria-labelledby="profile dropdown">
+                        <button className="dropdown-item sign-out-btn" onClick={() => props.handleSignOut()}>Sign out</button>
+                        <button className="dropdown-item settings-btn" onClick={() => window.location.href = "/settings"}>Settings</button>
                     </div>
                 </div>
             }

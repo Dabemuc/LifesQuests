@@ -11,7 +11,7 @@ interface Props {
 export default function Navbar(props: Props) {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark">
-        <a className="navbar-brand" href="#"><img src={Logo} alt="" width="100rem" height="25rem" /></a>
+        <a className="navbar-brand" href="/"><img src={Logo} alt="" width="100rem" height="25rem" /></a>
         <LoginWrapper user={props.user} handleSignOut={() => props.handleSignOut()} />
       </nav>
       )

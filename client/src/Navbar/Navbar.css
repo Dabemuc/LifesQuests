@@ -16,19 +16,19 @@
     margin-right: 1em;
 }
 
+.loginWrapper button{
+    height: 2em;
+    font-size: 1em;
+}
+
 .loginWrapper img.profile-pic {
     height: 2.5em;
     border-radius: 25px;
 }
 
-.loginWrapper .sign-out-btn {
+.loginWrapper .dropdown-menu {
     /* background-color: red; */
     right: 0px;
-}
-
-.loginWrapper .sign-out-btn button{
-    height: 2em;
-    font-size: 1em;
 }
 
 #g_a11y_announcement {
